@@ -39,9 +39,10 @@ function TakeATest() {
     const handleGetResultsClick = (ev) => {
         setLoading(true);
 
-        axios.post(API_BASE_URL + TAKE_TEST_ROUTE, {
-            file
-        }, {
+        const formData = new FormData();
+        formData.append('file', file);
+
+        axios.post(API_BASE_URL + TAKE_TEST_ROUTE, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             },

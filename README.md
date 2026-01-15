@@ -3,31 +3,67 @@
 ![Home Page Screenshot](screenshots/ss1.png)
 ![Take a test Screenshot](screenshots/ss2.png)
 
+This project is a full-stack web application designed for skin cancer detection. It combines a React-based frontend, a Node.js/Express management backend, and a specialized Flask backend for high-accuracy AI prediction.
 
-Skin Cancer Detection project is a sophisticated web application developed to detect skin cancer utilizing advanced deep learning techniques.
+## 🏗️ Architecture Overview
 
-## Features
+The system consists of three main components:
+1.  **Frontend**: Built with React, Vite, and Tailwind CSS.
+2.  **Management Backend (Node.js)**: Handles users, authentication, database (MongoDB), and result history.
+3.  **Research/AI Backend (Flask)**: Hosts the TensorFlow/Keras model for actual image classification.
 
-- User account creation and authentication system.
-- Test conducting functionality for users.
-- Ability to share test results with doctors.
-- Viewing test history.
-- Integration of React and Tailwind CSS for frontend development.
-- Utilization of Express for backend implementation.
-- Connection to MongoDB for data storage.
-- Training of predictive model using TensorFlow and Keras for skin cancer detection.
+---
 
-## Installation
+## 🛠️ Installation & Setup
 
-1. Install Node.js, Python & Git on your local machine.
+Before starting, ensure you have **Node.js (v18+)**, **Python (3.12+)**, and **MongoDB** installed.
 
-2. Clone the repository to your local machine:
-```sh
-git clone https://github.com/karantolani/skin-cancer-detection.git
+### 1. Flask Research/AI Backend
+This must be running for predictions to work.
+```bash
+cd flask-backend
+# Windows:
+.\venv\Scripts\activate
+python main.py
+# (Or simply run run_backend.bat)
 ```
-3. The steps to run server is mentioned in the respective folder.
 
-## Visual Aid
+### 2. Management Backend (Node.js)
+```bash
+cd backend
+npm install
+npm start
+```
+*Note: Ensure your MongoDB server is running.*
+
+### 3. Frontend (React)
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+---
+
+## ✨ Features
+
+- **User Authentication**: Secure signup and login system.
+- **AI Prediction**: Upload skin lesion images for immediate classification.
+- **Result Management**: Save and view history of previous tests.
+- **Reporting**: Ability to share or export results for medical consultation.
+
+---
+
+## 📁 Repository Structure
+
+- `/frontend`: React application source code.
+- `/backend`: Node.js Express server for user/data management.
+- `/flask-backend`: Python Flask server for AI model inference.
+- `/screenshots`: UI images and design diagrams.
+
+---
+
+## 📊 Visual Aid
 
 ![High Level Design](screenshots/diagram.png)
 ![Test Results 1](screenshots/ss4.png)
