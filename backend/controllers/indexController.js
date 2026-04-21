@@ -8,7 +8,7 @@ const axios = require("axios");
 const fs = require("fs");
 const { uuid } = require('uuidv4');
 
-const FLASK_SERVER_ENDPOINT = "http://127.0.0.1:5000/predict";
+const FLASK_SERVER_ENDPOINT = process.env.FLASK_URL || "http://127.0.0.1:5000/predict";
 
 async function handleSignUp(req, res) {
     if (!req.body.name || !req.body.email || !req.body.password)

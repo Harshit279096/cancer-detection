@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const PORT = Number(process.env.PORT) || 8081;
 const cors = require("cors");
@@ -7,7 +8,7 @@ const cookieParser = require("cookie-parser");
 
 const app = express();
 
-const DB_URL = 'mongodb://localhost:27017/skin-cancer-detection';
+const DB_URL = process.env.MONGODB_URI || 'mongodb://localhost:27017/skin-cancer-detection';
 
 connectToMongoDB(DB_URL)
     .then(() => console.log("Successfully connected to MongoDB"))

@@ -17,7 +17,6 @@ function Nav({user}) {
     return (
         <nav className="hidden ml-auto lg:flex gap-10 text-xl">
             <NavItem text="More about Skin Cancer" to="https://en.wikipedia.org/wiki/Skin_cancer" serverSideUrl={true}/>
-            <NavItem text="Contact Us" to="/contact-us"/>
             <div className="flex gap-5 items-center">
                 <Button text="Take a Test" onClick={takeATestBtnClick}/>
                 {

@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const SECRET_KEY = "4EC555C92F4AF519F1215D6B598C6";
+const SECRET_KEY = process.env.JWT_SECRET || "4EC555C92F4AF519F1215D6B598C6";
 
 
 function generateJwtToken(user) {
